@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+html{
+	scroll-behavior: smooth;
+	
+	/*   === Variable For Storing Colors ===   */
+	--bg-clr-1: #ffffff;
+	--bg-clr-2: #f7f8fa;
+	--primary-clr: #e74260;
+	--dark-heading-clr: #424242;
+	--dark-text-clr: #555;
+}
+body{
+	width: 100%;
+	min-height: 100%;
+}
+.website-wrapper{
+	width: 100%;
+	height: 100%;
+	max-width: 1400px;
+	margin: 0px auto;
+	background-color: #f3f3f3;
+}
+/*   === Reusable Code Starts ===   */
+button.btn{
+	display: inline-block;
+	padding: 10px 25px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	color: var(--bg-clr-1);
+	background-color: var(--primary-clr);
+	border: 1px solid transparent;
+	border-radius: 25px;
+	user-select: none;
+	cursor: pointer;
+	transition: all 0.20s ease-in;
+}
+button.btn:hover{
+	background-color: transparent;
+	border: 1px solid var(--primary-clr);
+	color: var(--primary-clr);
+}
+section .section-heading{
+	width: 100%;
+	text-align: center;
+	padding-bottom: 50px;
+}
+.section-heading h1{
+	position: relative;
+	/* font-size: 38px; */
+	/* color: var(--dark-heading-clr); */
+	margin-bottom: 30px;
+
+	margin-top: 40px;
+	color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-heading h1::before{
+	position: absolute;
+	content: '';
+	width: 120px;
+	height: 1.5px;
+	background-color: #003147;
+	top: calc(100% + 20px);
+	left: 50%;
+	transform: translateX(-50%);
+}
+/* .section-heading h1::after{
+	position: absolute;
+	content: '';
+	width: 14px;
+	height: 14px;
+	background-color: var(--primary-clr);
+	top: calc(100% + 14px);
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+} */
+/*   === Reusable Code Ends ===   */
+
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+#bold
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#survol {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#survol:hover {
+    color: #4d00f47d;
+}
+
+
+/* Wrap Style */
+
+.portfolio-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style navigation */
+
+#custom {
+    background: rgb(236, 241, 250);
+    position: absolute;
+    padding: 0px 15px;
+    left: 0px;
+    right: 0px;
+    z-index: 11;
+    transition: .8s;
+}
+
+header .portfolio-row.header-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name a {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hamburger i {
+    font-size: 20px;
+    background-color: rgb(236,241,250);
+    color: #01143e;
+    height: 30px;
+    width: 35px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #eee;
+    display: none;
+}
+
+.portfolio-navbar ul li {
+    display: inline;
+    margin-left: 35px;
+}
+
+.portfolio-navbar ul li a {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #000;
+    font-weight: 300;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.portfolio-navbar ul li a.active {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #ff5252;
+    font-weight: 300;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+
+/*   === Services Section Styling Starts ===   */
+section.services{
+	width: 100%;
+	padding: 80px 10% 40px;
+}
+.services .services-contents{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+.services-contents .service-box{
+	border: 1px solid #03a9f4;
+	padding: 35px 15px 20px;
+	text-align: center;
+	/* transition: background 0.3s; */
+	border-radius: 10px;
+	background-color: #ebeaf490;
+	transition: background 0.5s, transform 0.5s;
+}
+.services-contents .service-box:hover{
+	background-color: var(--bg-clr-2);
+	transform: translateY(-10px);
+}
+
+.hidden {
+	display: none;
+}
+
+#formesContainer.hide {
+	display: none;
+}
+
+#formesContainer {
+	border-top: 1px solid #03a9f4;
+	padding-top: 40px;
+}
+
+.unique {
+	padding-bottom: 20px;
+}
+
+/* #formesContainer.hide {
+	display: none;
+} */
+
+/* .services-contents .service-box .icon-box{
+	width: 80px;
+	height: 80px;
+	background-color: var(--primary-clr);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px auto;
+	transform: rotate(45deg);
+} */
+/* .services-contents .service-box .icon-box i{
+	color: blue;
+	font-size: 26px;
+	transform: rotate(-45deg);
+} */
+.services-contents .service-box .service-desc{
+	position: relative;
+	margin-top: 35px;
+}
+.service-box .service-desc h2{
+	font-size: 22px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+	color: var(--dark-heading-clr);
+}
+.service-box .service-desc p{
+	color: var(--dark-text-clr);
+	line-height: 1.3;
+}
+.service-box .service-desc a{
+	text-decoration: none;
+	color: var(--primary-clr);
+	cursor: pointer;
+	display: inline-block;
+	margin-top: 15px;
+}
+/*   === Services Section Styling Ends ===   */
+
+
+/*   === Project Order Section Styling Starts ===   */
+section.project-order{
+	width: 100%;
+	padding: 60px 10%;
+	background-color: #001f2d;
+	color: var(--bg-clr-1);
+	text-align: center;
+}
+.project-order h3{
+	font-size: 20px;
+	color: #777;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.project-order h1{
+	font-size: 42px;
+	color: var(--bg-clr-1);
+	text-transform: capitalize;
+	font-weight: 500;
+	margin: 25px 0px;
+}
+.project-order p{
+	color: #999;
+	max-width: 700px;
+	min-height: 1.4;
+	margin: 0px auto;
+}
+.project-order .project-order-btn{
+	margin-top: 40px;
+}
+/*   === Project Order Section Styling Ends ===   */
+
+/*   === Portfolio Section Styling Starts ===   */
+section.portfolio{
+	width: 100%;
+	padding: 80px 10% 40px;
+	margin-top: -70px;
+}
+.portfolio .portfolio-contents{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+.portfolio-contents .portfolio-item{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	min-height: 300px;
+	overflow: hidden;
+	border-radius: 5px;
+}
+.portfolio-contents .portfolio-item img{
+	width: 100%;
+	height: 80%;
+	object-fit: cover;
+	transition: transform 0.3s;
+}
+.portfolio-contents .portfolio-item:hover img{
+	transform: scale(1.1);
+}
+.portfolio-contents .portfolio-item .project-desc{
+	position: absolute;
+	width: 100%;
+	min-height: 20%;
+	padding: 10px;
+	left: 0;
+	bottom: 0;
+	background-color: var(--bg-clr-2);
+}
+.portfolio-item .project-desc h3{
+	font-size: 20px;
+	font-weight: 500;
+	color: var(--dark-heading-clr);
+}
+.portfolio-item .project-desc p{
+	font-size: 15px;
+	color: var(--dark-text-clr);
+	margin-top: 5px;
+}
+.portfolio-item .overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.portfolio-item .overlay a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+.portfolio .projects-btn-container{
+	text-align: right;
+	margin-top: 40px;
+}
+
+/*   === Portfolio Section Styling Ends ===   */
+
+
+/*   === Footer Section Styling Starts ===   */
+section.page-footer{
+	width: 100%;
+	padding: 40px 10%;
+	background-color: black;
+}
+.page-footer .footer-contents{
+	display: flex;
+	justify-content: center;
+}
+.footer-contents p{
+	font-size: 16px;
+	color: #999;
+}
+.footer-contents p span{
+	color: var(--primary-clr);
+	font-weight: bold;
+}
+/*   === Footer Section Styling Ends ===   */
+
+
+
+/*   === Media Query Starts ===   */
+@media(max-width: 1068px){
+	/* Portfolio Section */
+	.portfolio .portfolio-contents{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media(max-width: 868px){
+	/* Selecting All Sections */
+	.website-wrapper > section{
+		padding-left: 8%;
+		padding-right: 8%;
+	}
+	
+	/* Services Section */
+	.services .services-contents{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* @media(max-width: 768px){
+	
+} */
+
+@media(max-width: 668px){
+	/* Portfolio Section */
+	.portfolio .portfolio-contents{
+		grid-template-columns: 1fr;
+		grid-gap: 20px 0px;
+	}
+}
+
+@media(max-width: 568px){
+	/* Selecting All Sections' Heading */
+	.section-heading h1{
+		font-size: 32px;
+	}
+	/* Services Section */
+	.services .services-contents{
+		grid-template-columns: 1fr;
+		grid-gap: 20px 0px;
+	}
+	/* Project Order Section */
+	/* .project-order h1{
+		font-size: 32px;
+	} */
+}
+
+/* Responsive */
+
+@media (max-width: 1024px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 100px;
+    }
+
+}
+
+
+@media screen and (max-width:868px) {
+
+    #custom {
+        padding: 15px;
+        position: fixed;
+        background-color: rgb(236, 241, 250);
+        border-bottom: 1px solid #eee;
+    }
+
+    .hamburger i {
+        display: inline-block;
+    }
+
+    .portfolio-navbar {
+        position: absolute;
+        background-color: rgb(236, 241, 250);
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        display: none;
+    }
+
+    .portfolio-navbar.show {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .container {
+        margin-top: 100px;
+    }
+
+}
+
+/*   === Media Query Ends ===   */

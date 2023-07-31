@@ -1,0 +1,529 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.page
+{
+    background: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+    margin-bottom: 50px;
+}
+.container .left_Side
+{
+    position: relative;
+    background: #003147;
+    padding: 30px;
+    padding-right: 20px;
+}
+.profileText
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .imgBx
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2
+{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span
+{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contactInfo
+{
+    padding-top: 40px;
+}
+.title
+{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+#underligne
+{
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.contactInfo ul
+{
+    position: relative;
+}
+.contactInfo ul li
+{
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+.contactInfo ul li .icon
+{
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+.contactInfo ul li span
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.education li
+{
+    margin-bottom: 15px;
+}
+.contactInfo.education h5
+{
+    color: #03a9f4;
+    font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2)
+{
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4
+{
+    color: #fff;
+    font-weight: 300;
+}
+.contactInfo.language .percent
+{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+.contactInfo.language .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+
+.container .right_Side
+{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+.about
+{
+    margin-bottom: 50px;
+}
+.about:last-child
+{
+    margin-bottom: 0;
+}
+.title2
+{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p
+{
+    color: #333;
+}
+.about .box
+{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about .box .year_company
+{
+    min-width: 150px;
+}
+.about .box .year_company h5
+{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+.about .box .text h4
+{
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 16px;
+}
+.skills .box
+{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4
+{
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+
+}
+.skills .box .percent
+{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+.skills .box .percent div
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+.interest ul
+{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.interest ul li
+{
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interest ul li .fa
+{
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* Wrap Style */
+
+.portfolio-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style navigation */
+
+header {
+    background: rgb(236, 241, 250);
+    position: absolute;
+    padding: 0px 15px;
+    left: 0px;
+    right: 0px;
+    z-index: 11;
+    transition: .8s;
+}
+
+header .portfolio-row.header-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name a {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hamburger i {
+    font-size: 20px;
+    background-color: rgb(236,241,250);
+    color: #01143e;
+    height: 30px;
+    width: 35px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #eee;
+    display: none;
+}
+
+.portfolio-navbar ul li {
+    display: inline;
+    margin-left: 35px;
+}
+
+.portfolio-navbar ul li a {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #000;
+    font-weight: 300;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.portfolio-navbar ul li a.active {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #ff5252;
+    font-weight: 300;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+
+/* Footer Contact */
+
+#contact {
+    background: url('/image/footer-bg.gif') center no-repeat;
+    background-color: #131314;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+}
+
+.main-title {
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-title {
+    color: #fff;
+    position: absolute;
+    transform: translate3d(0, 100%, 0);
+}
+
+.main-title,
+.hover-title {
+    transition: .5s cubic-bezier(0.51, 0.57, 0.17, 1);
+}
+
+.text-wrap:hover .main-title {
+    transform: translate3d(0, -100%, 0);
+    transition-delay: 0.1s;
+}
+
+.text-wrap:hover .hover-title {
+    transform: translate3d(0, 0, 0);
+}
+
+.contact-info {
+    margin: 40px 0;
+}
+
+.contact-content {
+    padding: 100px 0;
+}
+
+.contact-info span,
+.contact-info a {
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-info h3 {
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-out 0s;
+}
+
+.social-link li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.social-link li a {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-out 0s;
+}
+
+/* Footer */
+section.page-footer{
+	width: 100%;
+	padding: 40px 10%;
+	background-color: rgb(18, 18, 19);
+}
+.page-footer .footer-contents{
+	display: flex;
+	justify-content: center;
+}
+.footer-contents p{
+	font-size: 14px;
+	color: #999;
+}
+.footer-contents p span{
+	color: #ff5252;
+	font-weight: bold;
+}
+/* Footer Ends */
+
+
+#bold
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#survol {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+#survol:hover {
+    color: #4d00f47d;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1024px)
+{
+    .container
+    {
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 100px;
+    }
+
+    .year_company
+    {
+        max-width: 5px;
+    }
+
+    .interest ul
+    {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (max-width: 600px)
+{
+    .about .box
+    {
+        flex-direction: column;
+    }
+    .about .box .year_company
+    {
+        margin-bottom: 5px;
+    }
+    .interest ul
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+@media screen and (max-width:700px) {
+
+
+    header {
+        padding: 15px;
+        position: fixed;
+        background-color: rgb(236, 241, 250);
+        border-bottom: 1px solid #eee;
+    }
+
+    .hamburger i {
+        display: inline-block;
+    }
+
+    .portfolio-navbar {
+        position: absolute;
+        background-color: rgb(236, 241, 250);
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        display: none;
+    }
+
+    .portfolio-navbar.show {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .container {
+        margin-top: 100px;
+    }
+
+}

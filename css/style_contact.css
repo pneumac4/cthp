@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Structure index*/
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* Wrap Style */
+
+.portfolio-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style navigation */
+
+header {
+    background: rgb(236, 241, 250);
+    position: absolute;
+    padding: 0px 15px;
+    left: 0px;
+    right: 0px;
+    z-index: 11;
+    transition: .8s;
+}
+
+header .portfolio-row.header-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name a {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hamburger i {
+    font-size: 20px;
+    background-color: rgb(236,241,250);
+    color: #01143e;
+    height: 30px;
+    width: 35px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #eee;
+    display: none;
+}
+
+.portfolio-navbar ul li {
+    display: inline;
+    margin-left: 35px;
+}
+
+.portfolio-navbar ul li a {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #000;
+    font-weight: 300;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.portfolio-navbar ul li a.active {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #ff5252;
+    font-weight: 300;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+#bold
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+#survol
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+#survol:hover {
+    color: #4d00f47d;
+}
+
+
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #222;
+}
+.contact .content
+{
+    max-width: 800px;
+    text-align: center;
+    margin-top: 100px;
+}
+.contact .content h2
+{
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+}
+.contact .content p
+{
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+.container .infocontact
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.container .infocontact .boite
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    cursor: pointer;
+}
+.container .infocontact .icone
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.75em;
+    transition: 0.5s;
+}
+.container .infocontact .boite:hover .icone
+{
+    background: #00bcd4;
+    color: #fff;
+}
+.container .infocontact .boite .texte
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 300;
+}
+.container .infocontact .boite .texte h3
+{
+    font-weight: 500;
+    color: #00bcd4;
+}
+.container .infocontact .txt
+{
+    color: #fff;
+    margin-top: 80px;
+    font-weight: 500;
+    padding-left: 10px;
+    border-left: 50px solid #e91e63;
+    line-height: 1em;
+}
+.sci
+{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+.sci li
+{
+    list-style: none;
+}
+.sci li a
+{
+    color: #fff;
+    font-size: 2em;
+    transition: 0.5s;
+}
+.sci li a:hover
+{
+    color: #00bcd4;
+}
+
+
+.container .contactForm
+{
+    position: relative;
+    width: 45%;
+    background: #fff;
+    min-height: 500px;
+    padding: 60px;
+}
+.container .contactForm h2
+{
+    font-size: 2em;
+    color: #333;
+    font-weight: 500;
+}
+.container .contactForm .inputBox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+.container .contactForm .inputBox input,
+.container .contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.container .contactForm .inputBox span
+{
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #666;
+    transition: 0.5s;
+}
+.container .contactForm .inputBox input:focus ~ span,
+.container .contactForm .inputBox textarea:focus ~ span,
+.container .contactForm .inputBox input:valid ~ span,
+.container .contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 0.9em;
+    transform: translateY(-20px);
+}
+.container .contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.container .contactForm .inputBox input[type="submit"]:hover
+{
+    width: 100px;
+    background: #0096a9;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Footer */
+section.page-footer{
+	width: 100%;
+	padding: 40px 10%;
+	background-color: rgb(18, 18, 19);
+}
+.page-footer .footer-contents{
+	display: flex;
+	justify-content: center;
+}
+.footer-contents p{
+	font-size: 14px;
+	color: #999;
+}
+.footer-contents p span{
+	color: #ff5252;
+	font-weight: bold;
+}
+/* Footer Ends */
+
+
+/* responsive */
+@media (max-width: 991px)
+{
+
+    h1,
+    h2 {
+        font-size: 3rem;
+    }
+
+    header {
+        padding: 15px;
+        position: fixed;
+        background-color: rgb(236, 241, 250);
+        border-bottom: 1px solid #eee;
+    }
+
+    .hamburger i {
+        display: inline-block;
+    }
+
+    .portfolio-navbar {
+        position: absolute;
+        background-color: rgb(236, 241, 250);
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        display: none;
+    }
+
+    .portfolio-navbar.show {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .txt {
+        font-size: 25px;
+    }
+
+    .contact
+    {
+        padding: 50px;
+    }
+    .container
+    {
+        flex-direction: column;
+    }
+    .container .infocontact,
+    .container .contactForm
+    {
+        width: 100%;
+    }
+    .container .contactForm
+    {
+        padding: 50px 30px;
+    }
+}

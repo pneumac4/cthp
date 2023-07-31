@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem;
+    color: #000;
+    font-weight: 700;
+}
+
+h3 {
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+/* Wrap Style */
+
+.portfolio-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Style navigation */
+
+header {
+    background: rgb(236, 241, 250);
+    position: absolute;
+    padding: 0px 15px;
+    left: 0px;
+    right: 0px;
+    z-index: 2000;
+    transition: .8s;
+}
+
+header .portfolio-row.header-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-name a {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hamburger i {
+    font-size: 20px;
+    background-color: rgb(236,241,250);
+    color: #01143e;
+    height: 30px;
+    width: 35px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #eee;
+    display: none;
+}
+
+.portfolio-navbar ul li {
+    display: inline;
+    margin-left: 35px;
+}
+
+.portfolio-navbar ul li a {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #000;
+    font-weight: 300;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+.portfolio-navbar ul li a.active {
+    font-size: 1rem;
+    line-height: 72px;
+    color: #ff5252;
+    font-weight: 300;
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Style main content */
+
+.slider {
+    position: relative;
+    padding: 150px 0 50px 0;
+    background: #f3f3f3;
+}
+
+.slider-content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.slider-general {
+    flex: 0 0 auto;
+    width: 60%;
+}
+
+.welcome-msg {
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    /* white-space: nowrap; */
+}
+
+.welcome-text h1 {
+    display: inline;
+}
+
+.text-wrap {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.welcome-title {
+    position: relative;
+    color: transparent;
+    -webkit-text-stroke: 1.1px #000;
+    white-space: nowrap;
+}
+
+.welcome-title::before {
+    content: attr(data-fill-text);
+    position: absolute;
+    width: 0;
+    height: 100%;
+    font-weight: 600;
+    transition: width 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    overflow: hidden;
+    color: #000;
+    white-space: nowrap;
+    -webkit-text-stroke: 0 transparent;
+    /* left: 0;
+    top: 0; */
+}
+
+.welcome-title:hover::before {
+    width: 100%;
+}
+
+.slider-general p {
+    line-height: 30px;
+    padding-right: 16%;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+/* Download CV */
+
+.download-resume a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 30px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    background: #ff5252;
+    position: relative;
+    z-index: 1001;
+    overflow: hidden;
+    text-transform: uppercase;
+    line-height: 30px;
+    border-radius: 50px 0 50px 50px;
+    transition: all 240ms linear 0ms;
+}
+
+.download-resume a:hover {
+    background: #293b5f;
+}
+
+.download-resume a::before {
+    content: "";
+    background: #fff;
+    transition: all .8s;
+    position:absolute;
+    height: 120%;
+    width: 25px;
+    opacity: .2;
+    left: -35%;
+    top: -10%;
+    transform: rotate(0);
+}
+
+.download-resume a:hover::before {
+    left: 130%;
+}
+
+.slider-image {
+    flex: 0 0 auto;
+    width: 40%;
+}
+
+.welcome-image img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 0 30% 0 30%;
+    cursor: pointer;
+}
+
+.welcome-image {
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.4s;
+}
+
+.welcome-image::before {
+    content: "";
+    width: calc(50% + 10px);
+    height: calc(50% + 10px);
+    right: -10px;
+    bottom: -10px;
+    position: absolute;
+    z-index: -1;
+    transition: all 0.7s;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+}
+
+.welcome-image:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-radius: 0 30% 0 30%;
+    filter: drop-shadow(0 0 30px rgba(255,74,23,.8));
+}
+
+.welcome-image:hover {
+    transform: translateY(-10.5px);
+}
+
+/* Footer Contact */
+
+#contact {
+    background: url('../image/footer-bg.gif') center no-repeat;
+    background-color: #131314;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+    display: flex;
+}
+
+#bold:hover {
+    color: #4d00f47d;
+}
+
+.main-title {
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-title {
+    color: #fff;
+    position: absolute;
+    transform: translate3d(0, 100%, 0);
+}
+
+.main-title,
+.hover-title {
+    transition: .5s cubic-bezier(0.51, 0.57, 0.17, 1);
+}
+
+.text-wrap:hover .main-title {
+    transform: translate3d(0, -100%, 0);
+    transition-delay: 0.1s;
+}
+
+.text-wrap:hover .hover-title {
+    transform: translate3d(0, 0, 0);
+}
+
+.contact-info {
+    margin: 40px 0;
+}
+
+.contact-content {
+    padding: 100px 0;
+}
+
+.contact-info span,
+.contact-info a {
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-info h3 {
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-out 0s;
+}
+
+.social-link li {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.social-link li a {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-out 0s;
+}
+
+/* Footer */
+section.page-footer{
+	width: 100%;
+	padding: 40px 10%;
+	background-color: rgb(18, 18, 19);
+}
+.page-footer .footer-contents{
+	display: flex;
+	justify-content: center;
+}
+.footer-contents p{
+	font-size: 14px;
+	color: #999;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-contents p span{
+	color: #ff5252;
+	font-weight: bold;
+}
+/* Footer */
+
+
+/* Responsive */
+
+@media screen and (max-width:700px) {
+
+    h1,
+    h2 {
+        font-size: 3rem;
+    }
+
+    header {
+        padding: 15px;
+        position: fixed;
+        background-color: rgb(236, 241, 250);
+        border-bottom: 1px solid #eee;
+    }
+
+    .hamburger i {
+        display: inline-block;
+    }
+
+
+    .portfolio-navbar {
+        position: absolute;
+        background-color: rgb(236, 241, 250);
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        display: none;
+    }
+
+    .portfolio-navbar.show {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: block;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* .brand-name a {
+        font-size: 1.4rem;
+    } */
+
+    .welcome-msg {
+        font-size: 0.9rem;
+    }
+
+
+    .welcome-text {
+        margin-top: 20px;
+    }
+
+    .welcome-text h1 {
+        font-size: 2.1rem;
+    }
+    
+    .welcome-title {
+        font-size: 2.1rem;
+        /* white-space: nowrap; */
+    }
+
+    .welcome-title::before {
+        font-size: 2.1rem;
+    }
+
+
+    .slider-content {
+        margin: 0 -15px;
+        padding: 0 30px;
+        margin-top: -50px;
+    }
+
+    .slider-image {
+        width: 100%;
+        order: 1;
+    }
+
+    .slider-general {
+        order: 2;
+        margin-top: 3rem;
+        width: 100%;
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    /* .brand-name a {
+        font-size: 1.4rem;
+    } */
+
+    .welcome-msg {
+        font-size: 0.9rem;
+    }
+    
+    .welcome-text {
+        margin-top: 20px;
+    }
+
+    .welcome-text h1 {
+        font-size: 2.1rem;
+    }
+    
+    .welcome-title {
+        font-size: 2.1rem;
+        /* white-space: nowrap; */
+    }
+
+    .welcome-title::before {
+        font-size: 2.1rem;
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem;
+    }
+
+
+    .slider-content {
+        margin: 0 -15px;
+        padding: 0 30px;
+        margin-top: -50px;
+    }
+}
