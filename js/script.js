@@ -14,25 +14,25 @@ const lienPDF7 = document.getElementById("lienPDF7");
 
 // Fonction pour ouvrir une nouvelle fenêtre avec le fichier PDF
 function ouvrirPDF1() {
-  window.open("../certificat/ecommerce.pdf", "_blank");
+  window.open("certificat/ecommerce.pdf", "_blank");
 }
 function ouvrirPDF2() {
-  window.open("../certificat/attestation.pdf", "_blank");
+  window.open("certificat/attestation.pdf", "_blank");
 }
 function ouvrirPDF3() {
-  window.open("../certificat/reconnaissance.pdf", "_blank");
+  window.open("certificat/reconnaissance.pdf", "_blank");
 }
 function ouvrirPDF4() {
-  window.open("../certificat/ieschool.pdf", "_blank");
+  window.open("certificat/ieschool.pdf", "_blank");
 }
 function ouvrirPDF5() {
-  window.open("../certificat/pabc.pdf", "_blank");
+  window.open("certificat/pabc.pdf", "_blank");
 }
 function ouvrirPDF6() {
-  window.open("../certificat/honneuretmerites.pdf", "_blank");
+  window.open("certificat/honneuretmerites.pdf", "_blank");
 }
 function ouvrirPDF7() {
-  window.open("../certificat/alliancefrancaise.pdf", "_blank");
+  window.open("certificat/alliancefrancaise.pdf", "_blank");
 }
 
 // Ajouter des écouteurs d'événements aux divs pour détecter les clics
