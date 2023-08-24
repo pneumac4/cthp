@@ -76,7 +76,7 @@ function toggleForm() {
 	// Ajouter un gestionnaire d'événement pour le clic sur le bouton
 	bouton.addEventListener("click", function() {
 	  // Rediriger vers la page spécifiée lorsque le bouton est cliqué
-	  window.location.href = "contact.html";
+	  window.location.href = "contact.html#contact";
 	});
 
 
