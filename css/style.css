@@ -133,7 +133,6 @@ header .portfolio-row.header-wrap {
     letter-spacing: 3px;
     margin-bottom: 20px;
     text-transform: uppercase;
-    /* white-space: nowrap; */
 }
 
 .welcome-text h1 {
@@ -266,7 +265,7 @@ header .portfolio-row.header-wrap {
 /* Footer Contact */
 
 #contact {
-    background: url('../image/footer-bg.gif') center no-repeat;
+    background: url('../images/footer-bg.gif') center no-repeat;
     background-color: #131314;
     text-align: center;
     padding: 50px 0;
