@@ -4,6 +4,7 @@ hamburger.addEventListener("click",function(){
 })
 
 // Récupérer les divs avec la classe "lien"
+const lienPDF0 = document.getElementById("lienPDF0");
 const lienPDF1 = document.getElementById("lienPDF1");
 const lienPDF2 = document.getElementById("lienPDF2");
 const lienPDF3 = document.getElementById("lienPDF3");
@@ -13,6 +14,9 @@ const lienPDF6 = document.getElementById("lienPDF6");
 const lienPDF7 = document.getElementById("lienPDF7");
 
 // Fonction pour ouvrir une nouvelle fenêtre avec le fichier PDF
+function ouvrirPDF0() {
+  window.open("certificats/entrepreneuriat.pdf", "_blank");
+}
 function ouvrirPDF1() {
   window.open("certificats/ecommerce.pdf", "_blank");
 }
@@ -36,6 +40,7 @@ function ouvrirPDF7() {
 }
 
 // Ajouter des écouteurs d'événements aux divs pour détecter les clics
+lienPDF0.addEventListener("click", ouvrirPDF0);
 lienPDF1.addEventListener("click", ouvrirPDF1);
 lienPDF2.addEventListener("click", ouvrirPDF2);
 lienPDF3.addEventListener("click", ouvrirPDF3);
@@ -47,13 +52,16 @@ lienPDF7.addEventListener("click", ouvrirPDF7);
 
 function toggleForm() {
 	var forme7 = document.querySelector('.service-box:nth-child(7)');
+	var forme8 = document.querySelector('.service-box:nth-child(8)');
 	var voirPlusBtn = document.getElementById('voirPlusBtn');
   
-	if (forme7.classList.contains('hidden')) {
+	if (forme7.classList.contains('hidden') && forme8.classList.contains('hidden')) {
 	  forme7.classList.remove('hidden');
+	  forme8.classList.remove('hidden');
 	  voirPlusBtn.textContent = 'Voir moins';
 	} else {
 	  forme7.classList.add('hidden');
+	  forme8.classList.add('hidden');
 	  voirPlusBtn.textContent = 'Voir plus';
 	}
   }

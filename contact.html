@@ -38,7 +38,7 @@
     <section class="contact">
         <div class="content">
             <h2>Contact</h2>
-            <p>En quête d’un idéal candidat ? Vous tombez bien. Laissez un message pour de plus amples informations, je me ferai un plaisir de vous répondre au plus vite.</p>
+            <p>En quête d’un idéal candidat ? Vous tombez bien. Laissez un message pour davantage de renseignements, je me ferai un plaisir de vous répondre au plus vite.</p>
         </div>
         <div class="container">
             <div class="infocontact">
@@ -54,7 +54,7 @@
                     <div class="icone"><ion-icon name="call-outline"></ion-icon></div>
                     <div class="texte">
                         <h3>Téléphone</h3>
-                        <p>+ (509) 47 04 5935</p>
+                        <p>(509) 47 04 5935</p>
                     </div>
                 </div>
                 <div class="boite">
@@ -66,10 +66,10 @@
                 </div>
                 <h2 class="txt">Connectez-vous avec moi.</h2>
                 <ul class="sci">
-                    <li><a href="https://wa.me/50947045935/?text=Salut%20%21%20J%27ai%20visité%20votre%20site%20portfolio%2C%20je%20souhaite%20discuter%20avec%20vous%2E" target="_blank"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
-                    <li><a href="https://www.facebook.com/messages/t/theophin.carlos.9`" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                    <li><a href="https://t.me/pneumatheo/" target="_blank" class="fa-brands fa-telegram"></a></li>
-                    <li><a href="https://www.linkedin.com/in/tpc4" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                    <li><a href="https://wa.me/50947045935/?text=Hello%20%21%20J%27ai%20visité%20votre%20site%20portfolio%2C%20je%20souhaite%20discuter%20avec%20vous%2E" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.facebook.com/messages/t/pneumatheocatiany" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://t.me/pneumatheo/" target="_blank"><i class="fa-brands fa-telegram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/tpc4" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                 </ul>
             </div>
 
@@ -77,15 +77,15 @@
                 <form action="https://formsubmit.co/pneumacatiany4@gmail.com" method="POST">
                     <h2>Envoyer un message</h2>
                     <div class="inputBox">
-                        <input type="text" name="Name" required="required" autocomplete="off">
+                        <input type="text" name="Name" required="required" maxlength="50" autocomplete="off">
                         <span>Nom complet</span>
                     </div>
                     <div class="inputBox">
-                        <input type="email" name="Email" required="required" autocomplete="off">
+                        <input type="email" name="Email" required="required" maxlength="50" autocomplete="off">
                         <span>Email</span>
                     </div>
                     <div class="inputBox">
-                        <textarea type="text" name="Message" required="required" autocomplete="off"></textarea>
+                        <textarea id="messageBox" type="text" name="Message" required="required" maxlength="1000" autocomplete="off" oninput="autoExpand(this)" rows="1"></textarea>
                         <span>Ecrivez votre message...</span>
                     </div>
                     <div class="inputBox">
@@ -103,11 +103,18 @@
     <!-- footer -->
     <section class="page-footer">
         <footer class="footer-contents">
-            <p>&copy; 2023 <span>Catiany</span> | Tous droits réservés.</p>
+            <p>&copy; 2024 <span>Catiany</span> | Tous droits réservés.</p>
         </footer>
     </section>
 
     <script src="js/script.js"></script>
+    <script>
+        function autoExpand(textarea) {
+          textarea.style.height = "auto";
+          let maxHeight = parseInt(getComputedStyle(textarea).lineHeight) * 4;
+          textarea.style.height = Math.min(textarea.scrollHeight, maxHeight) + "px";
+        }
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

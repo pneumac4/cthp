@@ -212,10 +212,10 @@ header .portfolio-row.header-wrap {
 .sci li a
 {
     color: #fff;
-    font-size: 2em;
+    font-size: 1.8em;
     transition: 0.5s;
 }
-.sci li a:hover
+.sci li a i:hover
 {
     color: #00bcd4;
 }
@@ -272,6 +272,12 @@ header .portfolio-row.header-wrap {
     color: #e91e63;
     font-size: 0.9em;
     transform: translateY(-20px);
+}
+#messageBox {
+    overflow-y: auto;
+    resize: none;
+    line-height: 1.5em;
+    margin-top: 20px;
 }
 .container .contactForm .inputBox input[type="submit"]
 {
