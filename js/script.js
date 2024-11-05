@@ -89,7 +89,7 @@ function toggleForm() {
 
 
 // Magnific Popup
-$('.unique').magnificPopup({
+$('.showallimg').magnificPopup({
 	delegate: '.overlay a',
 	type: 'image',
 	gallery:{
@@ -97,10 +97,3 @@ $('.unique').magnificPopup({
 	}
 })
 
-$('.hide').magnificPopup({
-	delegate: '.overlay a',
-	type: 'image',
-	gallery:{
-		enabled: true
-	}
-})
