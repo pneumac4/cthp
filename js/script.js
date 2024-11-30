@@ -21,7 +21,7 @@ function ouvrirPDF1() {
   window.open("certificats/ecommerce.pdf", "_blank");
 }
 function ouvrirPDF2() {
-  window.open("certificats/attestation.pdf", "_blank");
+  window.open("certificats/diplome-pneuma-t-catiany.pdf", "_blank");
 }
 function ouvrirPDF3() {
   window.open("certificats/reconnaissance.pdf", "_blank");
