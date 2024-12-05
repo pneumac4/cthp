@@ -110,7 +110,6 @@ header .portfolio-row.header-wrap {
 .contact
 {
     position: relative;
-    max-width: 1400px;
     min-height: 100vh;
     padding: 50px 100px;
     display: flex;
@@ -143,6 +142,7 @@ header .portfolio-row.header-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1400px;
     gap: 50px;
     margin-top: 30px;
 }
