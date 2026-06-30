@@ -102,7 +102,7 @@
     position: relative;
     list-style: none;
     margin: 10px 0;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .contactInfo ul li .icon
 {
@@ -115,6 +115,10 @@
 {
     color: #fff;
     font-weight: 300;
+}
+.contactInfo ul li span a:hover
+{
+    color: #03a9f4;
 }
 .contactInfo.education li
 {
