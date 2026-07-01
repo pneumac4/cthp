@@ -143,7 +143,7 @@ header .portfolio-row.header-wrap {
     position: relative;
     display: inline-flex;
     overflow: hidden;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .welcome-title {
@@ -229,7 +229,7 @@ header .portfolio-row.header-wrap {
     object-fit: cover;
     vertical-align: middle;
     border-radius: 0 30% 0 30%;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .welcome-image {
