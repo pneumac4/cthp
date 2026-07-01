@@ -3,56 +3,18 @@ hamburger.addEventListener("click",function(){
     document.querySelector(".portfolio-navbar").classList.toggle("show");
 })
 
-// Récupérer les divs avec la classe "lien"
-const lienPDF0 = document.getElementById("lienPDF0");
-const lienPDF1 = document.getElementById("lienPDF1");
-const lienPDF2 = document.getElementById("lienPDF2");
-const lienPDF3 = document.getElementById("lienPDF3");
-const lienPDF4 = document.getElementById("lienPDF4");
-const lienPDF5 = document.getElementById("lienPDF5");
-const lienPDF6 = document.getElementById("lienPDF6");
-const lienPDF7 = document.getElementById("lienPDF7");
-const lienPDF8 = document.getElementById("lienPDF8");
-
-// Fonction pour ouvrir une nouvelle fenêtre avec le fichier PDF
-function ouvrirPDF0() {
-  window.open("certificats/attestation-oif.pdf", "_blank");
-}
-function ouvrirPDF1() {
-  window.open("certificats/entrepreneuriat.pdf", "_blank");
-}
-function ouvrirPDF2() {
-  window.open("certificats/ecommerce.pdf", "_blank");
-}
-function ouvrirPDF3() {
-  window.open("certificats/diplome-pneuma-t-catiany.pdf", "_blank");
-}
-function ouvrirPDF4() {
-  window.open("certificats/reconnaissance.pdf", "_blank");
-}
-function ouvrirPDF5() {
-  window.open("certificats/ieschool.pdf", "_blank");
-}
-function ouvrirPDF6() {
-  window.open("certificats/pabc.pdf", "_blank");
-}
-function ouvrirPDF7() {
-  window.open("certificats/honneuretmerites.pdf", "_blank");
-}
-function ouvrirPDF8() {
-  window.open("certificats/alliancefrancaise.pdf", "_blank");
+// Année dynamique dans le pied de page
+const yearEl = document.getElementById("year");
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
 }
 
-// écouteurs d'événements aux divs pour détecter les clics
-lienPDF0.addEventListener("click", ouvrirPDF0);
-lienPDF1.addEventListener("click", ouvrirPDF1);
-lienPDF2.addEventListener("click", ouvrirPDF2);
-lienPDF3.addEventListener("click", ouvrirPDF3);
-lienPDF4.addEventListener("click", ouvrirPDF4);
-lienPDF5.addEventListener("click", ouvrirPDF5);
-lienPDF6.addEventListener("click", ouvrirPDF6);
-lienPDF7.addEventListener("click", ouvrirPDF7);
-lienPDF8.addEventListener("click", ouvrirPDF8);
+// Ouvrir le certificat PDF correspondant au clic (un seul écouteur pour toutes les cartes)
+document.querySelectorAll("[data-pdf]").forEach(function (box) {
+  box.addEventListener("click", function () {
+    window.open(box.dataset.pdf, "_blank");
+  });
+});
 
 
 function toggleForm() {
@@ -77,31 +39,34 @@ function toggleForm() {
   const ButtonView = document.getElementById("ButtonView");
   const formesContainer = document.getElementById("formesContainer");
 
-  ButtonView.addEventListener("click", function() {
-		formesContainer.classList.toggle("hide");
-	  if (formesContainer.classList.contains("hide")) {
-			ButtonView.textContent = "Voir plus";
-	  } else {
-			ButtonView.textContent = "Voir moins";
-		}
-  });
+  if (ButtonView && formesContainer) {
+    ButtonView.addEventListener("click", function() {
+      formesContainer.classList.toggle("hide");
+      if (formesContainer.classList.contains("hide")) {
+        ButtonView.textContent = "Voir plus";
+      } else {
+        ButtonView.textContent = "Voir moins";
+      }
+    });
+  }
 
-  // Récupérer le bouton par son ID
+  // Bouton "Prendre contact" (présent uniquement sur portfolio.html)
 	const bouton = document.getElementById("monBouton");
-  
-	// Ajouter un gestionnaire d'événement pour le clic sur le bouton
-	bouton.addEventListener("click", function() {
-	  // Rediriger vers la page spécifiée lorsque le bouton est cliqué
-	  window.location.href = "contact.html#contact";
-	});
-
-
-// Magnific Popup
-$('.showallimg').magnificPopup({
-	delegate: '.overlay a',
-	type: 'image',
-	gallery:{
-		enabled: true
+	if (bouton) {
+	  bouton.addEventListener("click", function() {
+	    window.location.href = "contact.html#contact";
+	  });
 	}
-})
+
+
+// Magnific Popup (jQuery n'est chargé que sur portfolio.html)
+if (window.jQuery) {
+  $('.showallimg').magnificPopup({
+    delegate: '.overlay a',
+    type: 'image',
+    gallery: {
+      enabled: true
+    }
+  });
+}
 
