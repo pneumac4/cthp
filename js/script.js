@@ -1,7 +1,27 @@
 const hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click",function(){
-    document.querySelector(".portfolio-navbar").classList.toggle("show");
+const portfolioNavbar = document.querySelector(".portfolio-navbar");
+
+hamburger.addEventListener("click", function (e) {
+    e.stopPropagation();
+    portfolioNavbar.classList.toggle("show");
 })
+
+// Fermer le menu mobile si on clique en dehors du menu (ou d'un lien du menu)
+document.addEventListener("click", function (e) {
+    const clicDansLeMenu = portfolioNavbar.contains(e.target);
+    const clicSurHamburger = hamburger.contains(e.target);
+
+    if (portfolioNavbar.classList.contains("show") && !clicDansLeMenu && !clicSurHamburger) {
+        portfolioNavbar.classList.remove("show");
+    }
+});
+
+// Fermer le menu quand on clique sur un lien du menu (utile en mobile)
+portfolioNavbar.querySelectorAll("a").forEach(function (lien) {
+    lien.addEventListener("click", function () {
+        portfolioNavbar.classList.remove("show");
+    });
+});
 
 // Année dynamique dans le pied de page
 const yearEl = document.getElementById("year");
